@@ -1,0 +1,23 @@
+<aside class="col-sm-3 col-md-2 col-lg-2 sidebar">
+    <ul class="nav nav-sidebar">
+        <li id="li2" {% if activate == 'article' %} class="active" {% endif %}>
+        <a href="{% url 'article:article' %}">文章</a>
+        </li>
+    </ul>
+    <ul class="nav nav-sidebar">
+        <li id="li6" {% if activate == 'category' %} class="active" {% endif %}>
+        <a href="{% url 'column:category' %}">栏目</a></li>
+    </ul>
+    <ul class="nav nav-sidebar">
+        <li id="li7" {% if activate == 'user' %} class="active" {% endif %}>
+        <a class="dropdown-toggle" id="userMenu" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">用户设置</a>
+            <ul class="dropdown-menu" aria-labelledby="userMenu">
+                <li><a href="#">管理用户组</a></li>
+                <li><a href="{% url 'user:manage_user' %}">管理用户</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url 'user:loginlog' %}">管理登录日志</a></li>
+            </ul>
+        </li>
+    </ul>
+</aside>
